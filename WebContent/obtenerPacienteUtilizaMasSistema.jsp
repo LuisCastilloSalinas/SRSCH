@@ -109,8 +109,8 @@
 
 
 	<script src="js/jquery-2.1.4.min.js"></script>
-	<script src="js/jsUtil.js"></script>
 	<script src="js/jsPaciente.js"></script>
+	<script src="js/jsUtil.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/jquery-ui.js"></script>
 	<script src="js/datapicker.js"></script>
