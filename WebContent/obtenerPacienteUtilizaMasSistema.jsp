@@ -29,7 +29,7 @@
 			
 		</div>
 	</div>
-	<form action="PacienteUsaMasSistema" method="post">
+	
 		<div class="container">
 
 
@@ -76,16 +76,22 @@
 
 					<div class="row">
 						<div class="col-md-2 col-md-offset-4">
-							<input type="submit" value="Calcular">
+							<input id="calcular" type="submit" value="Calcular">
 						</div>
 						<div class="col-md-2">
-						<button class="btn- btn-danger" type="reset">Cancelar</button>
+						<button class="btn- btn-danger" type="reset" id="reset">Cancelar</button>
 						</div>
 						
 					</div>
 					
-					<div class="row">
-					
+					<div class="row" id="reporte" hidden="" style="margin-top: 3em;">
+						<div class="col-md-5  col-md-offset-2">
+							<table class="tabla" border='4'>
+							<tr>
+								<td>Nombre</td><td>Porcentaje Ocupacion </td>
+							</tr>
+							</table>
+						</div>
 					
 					</div>
 
@@ -103,7 +109,7 @@
 		</div>
 
 
-	</form>
+	
 
 
 

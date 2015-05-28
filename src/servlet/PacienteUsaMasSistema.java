@@ -1,6 +1,7 @@
 package servlet;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -33,13 +34,6 @@ public class PacienteUsaMasSistema extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-	}
-
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
 		ObtenerPacienteMasAtendidoWSProxy pma = new ObtenerPacienteMasAtendidoWSProxy();
 		String inputString1 = request.getParameter("fecha1");
 		String inputString2 = request.getParameter("fecha2");
@@ -53,7 +47,7 @@ public class PacienteUsaMasSistema extends HttpServlet {
 			f1 = (Date) inputFormat.parse(inputString1);
 			DateFormat outputFormat = new SimpleDateFormat("yyyy/MM/dd");
 			String outputString = outputFormat.format(f1);
-			System.out.println(outputString);
+			//System.out.println(outputString);
 			f1 = (Date) outputFormat.parse(outputString);
 			
 			c1.setTime(f1);
@@ -61,7 +55,7 @@ public class PacienteUsaMasSistema extends HttpServlet {
 			f2 = (Date) inputFormat.parse(inputString2);
 
 			outputString = outputFormat.format(f2);
-			System.out.println(outputString);
+			//System.out.println(outputString);
 			f2 = (Date) outputFormat.parse(outputString);
 			
 			c2.setTime(f2);
@@ -76,6 +70,17 @@ public class PacienteUsaMasSistema extends HttpServlet {
 		
 		String pacientes = pma.pacienteMasAtendido(c1,c2);
 		System.out.println(pacientes);
+		PrintWriter pw = response.getWriter();
+		pw.print(pacientes);
+		pw.close();
+		
+	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
 		
 		
 	}
