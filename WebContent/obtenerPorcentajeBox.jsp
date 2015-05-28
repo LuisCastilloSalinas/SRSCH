@@ -5,7 +5,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
-<link rel="stylesheet" type="text/css" href="css/datapicker.css"> 
+<link rel="stylesheet" type="text/css" href="css/jquery.datetimepicker.css"> 
 <title>SRHMSC</title>
 
 </head>
@@ -68,6 +68,7 @@
 						
 						<div>
 						 	<input name="fecha1" type="text" class="datepicker" value="" id="dpd1" readonly="readonly" required="required"></input>
+						 
 						</div>
 						
 					</div>
@@ -121,10 +122,11 @@
 	
 
 	<script src="js/jquery-2.1.4.min.js"></script>
+	<script src="js/jquery.datetimepicker.js"></script>
 	<script src="js/jsBox.js"></script>
 	<script src="js/jsUtil.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/jquery-ui.js"></script>
-	<script src="js/datapicker.js"></script>
+	
 </body>
 </html>

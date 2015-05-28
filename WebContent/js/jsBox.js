@@ -2,8 +2,8 @@
  * 
  */
 $("document").ready(function() {
-	$("#dpd1").datepicker();
-	$("#dpd2").datepicker();
+	$('#dpd1').datetimepicker();
+	
 	
 	$.getJSON('ServletObBox', function(responseJson) {
 		var $select = $('#myselect');
