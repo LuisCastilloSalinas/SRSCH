@@ -52,3 +52,7 @@ encoding//src/webservices/PacientesWSService.java=UTF-8
 encoding//src/webservices/PacientesWSServiceLocator.java=UTF-8
 encoding//src/webservices/PacientesWSSoapBindingStub.java=UTF-8
 encoding//src/webservices/PersistentException.java=UTF-8
+encoding//src/webservices/ReservarHoraAPSWS.java=UTF-8
+encoding//src/webservices/ReservarHoraAPSWSService.java=UTF-8
+encoding//src/webservices/ReservarHoraAPSWSServiceLocator.java=UTF-8
+encoding//src/webservices/ReservarHoraAPSWSSoapBindingStub.java=UTF-8

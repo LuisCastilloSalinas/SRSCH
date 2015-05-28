@@ -67,27 +67,29 @@
 						</div>
 						<div class="col-md-3  ">
 
-							<select  id="selectPaciente" name="myselect" style="width: 100%">
+							<select  id="selectPaciente" name="selectPaciente" style="width: 100%">
+								<option>----</option>
+							</select>
+						</div>
+					</div>
+
+					<div class="row ">
+
+
+						<div class="col-md-2">
+							<label>Hora Médica:</label>
+						</div>
+						<div class="col-md-3  ">
+
+							<select  id="selectFecha" name="selectFecha" style="width: 100%">
 								<option>----</option>
 							</select>
 						</div>
 					</div>
 
 					<div class="row">
-						<div class="col-md-2">
-							<label>Hasta :</label>
-						</div>
-						
-						<div>
-						 	<input name="fecha2" type="text" class="datepicker" value="" id="dpd2" readonly="readonly" required="required"></input>
-						</div>
-						
-						
-					</div>
-
-					<div class="row">
 						<div class="col-md-2 col-md-offset-4">
-							<input type="submit" value="Calcular">
+							<input type="submit" value="Reservar" id="reservar">
 						</div>
 						<div class="col-md-2">
 						<button class="btn- btn-danger" type="reset">Cancelar</button>
@@ -96,16 +98,8 @@
 					</div>
 					
 					<div class="row">
-					<div class="col-md-3">
-							<table class="">
-								<tr>
-									<td>Porcentaje Ocupacion</td>
-									<td>${mensaje}</td>
-								</tr>
-							</table>
-
-					</div>
 					
+					<div id="numeroReserva"></div>
 					</div>
 
 

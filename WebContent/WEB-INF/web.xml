@@ -129,4 +129,14 @@
     <servlet-name>ObtenerHorasAPSMedico</servlet-name>
     <url-pattern>/ObtenerHorasAPSMedico</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ReservarHoraAPS</display-name>
+    <servlet-name>ReservarHoraAPS</servlet-name>
+    <servlet-class>servlet.ReservarHoraAPS</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ReservarHoraAPS</servlet-name>
+    <url-pattern>/ReservarHoraAPS</url-pattern>
+  </servlet-mapping>
 </web-app>
