@@ -25,7 +25,7 @@
   </div>
 		<div class="col-md-12">
 			
-				<h2 class="text-center">Obtener Horario Médico</h2>
+				<h2 class="text-center">Reservar hora médica APS</h2>
 			
 		</div>
 	</div>

@@ -20,7 +20,6 @@ $("#calcular").click(function obtenerPacientes() {
 
 	  var fecha1 = $('#dpd1').val();
 	  var fecha2 = $('#dpd2').val();
-	alert("hola")
 	  $.getJSON("MedicoMasSolicitado?fecha1=" + fecha1 + "&fecha2=" + fecha2+"",function(responseJson) {
 	            $.each(responseJson, function(key, value) {
 	                      $('.tabla tr:last').after(

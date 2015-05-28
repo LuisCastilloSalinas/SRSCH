@@ -79,4 +79,14 @@
     <servlet-name>MedicoMasSolicitado</servlet-name>
     <url-pattern>/MedicoMasSolicitado</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>BuscarHoraAPSM</display-name>
+    <servlet-name>BuscarHoraAPSM</servlet-name>
+    <servlet-class>servlet.BuscarHoraAPSM</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>BuscarHoraAPSM</servlet-name>
+    <url-pattern>/BuscarHoraAPSM</url-pattern>
+  </servlet-mapping>
 </web-app>
