@@ -29,7 +29,7 @@
 			
 		</div>
 	</div>
-	<form action="ServletObBox" method="post">
+	
 		<div class="container">
 
 
@@ -78,7 +78,7 @@
 
 					<div class="row">
 						<div class="col-md-2 col-md-offset-4">
-							<input type="submit" value="Calcular">
+							<input type="submit" value="Calcular" id="calcular">
 						</div>
 						<div class="col-md-2">
 						<button class="btn- btn-danger" type="reset">Cancelar</button>
@@ -86,8 +86,14 @@
 						
 					</div>
 					
-					<div class="row">
-
+					<div class="row" id="reporte" hidden="" style="margin-top: 3em;">
+						<div class="col-md-5  col-md-offset-2">
+							<table class="tabla" border='4'>
+							<tr>
+								<td> Nombre </td><td>Porcentaje Ocupacion % </td>
+							</tr>
+							</table>
+						</div>
 					
 					</div>
 
@@ -105,12 +111,12 @@
 		</div>
 
 
-	</form>
 
 
 	<script src="js/jquery-2.1.4.min.js"></script>
 	<script src="js/jquery.datetimepicker.js"></script>
 	<script src="js/jsUtil.js"></script>
+	<script src="js/jsMedico.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/jquery-ui.js"></script>
 

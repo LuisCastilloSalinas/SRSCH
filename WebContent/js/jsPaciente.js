@@ -16,6 +16,3 @@ $("#calcular").click(function obtenerPacientes() {
 	  $("#reporte").fadeIn(1000);
 	});
 
-$("#reset").click(function (){
-	$("#dpd1").empty();
-});

@@ -50,8 +50,7 @@ public class PacienteUsaMasSistema extends HttpServlet {
 
 			c2.setTime(f2);
 
-			System.out.println(f1);
-			System.out.println(f2);
+			
 
 		} catch (ParseException e) {
 			// TODO Auto-generated catch block
@@ -59,7 +58,6 @@ public class PacienteUsaMasSistema extends HttpServlet {
 		}
 		
 		String pacientes = pma.pacienteMasAtendido(c1,c2);
-		System.out.println(pacientes);
 		PrintWriter pw = response.getWriter();
 		pw.print(pacientes);
 		pw.close();
