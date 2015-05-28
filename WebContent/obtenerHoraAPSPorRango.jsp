@@ -43,19 +43,7 @@
 
 				</div>
 				<div class="col-md-8 well">
-					<div class="row ">
-
-
-						<div class="col-md-2">
-							<label>Médico:</label>
-						</div>
-						<div class="col-md-3  ">
-
-							<select  id="myselect" name="myselect" style="width: 100%">
-								<option>----</option>
-							</select>
-						</div>
-					</div>
+					
 
 
 					<div class="row">
@@ -117,17 +105,12 @@
 		</div>
 
 
-
-
-
-	${mensaje}
-
 	<script src="js/jquery-2.1.4.min.js"></script>
 	<script src="js/jquery.datetimepicker.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/jquery-ui.js"></script>
-
 	<script src="js/jsPaciente.js"></script>
+	
 	<script src="js/jsUtil.js"></script>
 </body>
 </html>

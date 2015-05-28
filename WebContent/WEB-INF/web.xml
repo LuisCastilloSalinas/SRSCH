@@ -99,4 +99,14 @@
     <servlet-name>BuscarHoraAPSR</servlet-name>
     <url-pattern>/BuscarHoraAPSR</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>BuscarSuDisponibilidadHora</display-name>
+    <servlet-name>BuscarSuDisponibilidadHora</servlet-name>
+    <servlet-class>servlet.BuscarSuDisponibilidadHora</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>BuscarSuDisponibilidadHora</servlet-name>
+    <url-pattern>/BuscarSuDisponibilidadHora</url-pattern>
+  </servlet-mapping>
 </web-app>
