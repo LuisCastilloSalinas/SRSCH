@@ -109,4 +109,14 @@
     <servlet-name>BuscarSuDisponibilidadHora</servlet-name>
     <url-pattern>/BuscarSuDisponibilidadHora</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ServletObPaciente</display-name>
+    <servlet-name>ServletObPaciente</servlet-name>
+    <servlet-class>servlet.ServletObPaciente</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ServletObPaciente</servlet-name>
+    <url-pattern>/ServletObPaciente</url-pattern>
+  </servlet-mapping>
 </web-app>

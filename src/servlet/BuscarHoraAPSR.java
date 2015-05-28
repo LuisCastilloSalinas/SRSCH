@@ -50,8 +50,6 @@ public class BuscarHoraAPSR extends HttpServlet {
 
 			c2.setTime(f2);
 
-			System.out.println(f1);
-			System.out.println(f2);
 
 		} catch (ParseException e) {
 			// TODO Auto-generated catch block

@@ -92,7 +92,7 @@
 							<input type="submit" value="Calcular">
 						</div>
 						<div class="col-md-2">
-						<button class="btn- btn-danger" type="reset">Cancelar</button>
+						<button class="btn- btn-danger" type="reset" id="reset">Cancelar</button>
 						</div>
 						
 					</div>

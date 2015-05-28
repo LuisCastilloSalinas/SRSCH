@@ -2,6 +2,8 @@
  * 
  */
 $("document").ready(function() {
+	
+	
 	$.getJSON('ObtenerMedico', function(responseJson) {
 		var $select = $('#myselect');
 
@@ -20,6 +22,10 @@ $("#calcular").click(function obtenerMedicos() {
 
 	  var fecha1 = $('#dpd1').val();
 	  var fecha2 = $('#dpd2').val();
+	  if(fecha1!="" && fecha2!=""){
+	  $(function (){
+			$(".tabla").find('tr:gt(0)').remove();
+		});
 	  $.getJSON("MedicoMasSolicitado?fecha1=" + fecha1 + "&fecha2=" + fecha2+"",function(responseJson) {
 	            $.each(responseJson, function(key, value) {
 	                      $('.tabla tr:last').after(
@@ -28,12 +34,17 @@ $("#calcular").click(function obtenerMedicos() {
 	                    });
 	          });
 	  $("#reporte").fadeIn(1000);
-	});
+	}else {
+		alert("debe ingresar rango de fechas");
+	}
+	  
+	  });
 
 $("#buscar").click(function buscarSusHoras(){
 	var myselect=$("#myselect").val();
 	var fecha1 = $('#dpd1').val();
 	var fecha2 = $('#dpd2').val();
+	if(fecha1!="" && fecha2!=""){
 	$(function (){
 		$(".tabla").find('tr:gt(0)').remove();
 	});
@@ -46,5 +57,9 @@ $("#buscar").click(function buscarSusHoras(){
                  });
          $("#reporte").fadeIn(1000);
        });
+	}else {
+		alert("debe ingresar rango de fechas");
+	}
 	
 });
+

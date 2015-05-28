@@ -29,7 +29,7 @@
 			
 		</div>
 	</div>
-	<form action="ServletObBox" method="post">
+	<form onsubmit="return false">
 		<div class="container">
 
 
@@ -92,18 +92,7 @@
 						
 					</div>
 					
-					<div class="row">
-					<div class="col-md-3">
-							<table class="">
-								<tr>
-									<td>Porcentaje Ocupacion</td>
-									<td>${mensaje}</td>
-								</tr>
-							</table>
-
-					</div>
 					
-					</div>
 
 
 				</div>

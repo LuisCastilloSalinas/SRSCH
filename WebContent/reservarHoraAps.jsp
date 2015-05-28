@@ -29,7 +29,7 @@
 			
 		</div>
 	</div>
-	<form action="ServletObBox" method="post">
+	<form onsubmit="return false">
 		<div class="container">
 
 
@@ -59,15 +59,18 @@
 					</div>
 
 
-					<div class="row">
+					<div class="row ">
+
+
 						<div class="col-md-2">
-							<label>Desde: </label>
+							<label>Paciente:</label>
 						</div>
-						
-						<div>
-						 	<input name="fecha1" type="text" class="datepicker" value="" id="dpd1" readonly="readonly" required="required"></input>
+						<div class="col-md-3  ">
+
+							<select  id="selectPaciente" name="myselect" style="width: 100%">
+								<option>----</option>
+							</select>
 						</div>
-						
 					</div>
 
 					<div class="row">
@@ -130,6 +133,7 @@
 	<script src="js/jquery-ui.js"></script>
 		<script src="js/jquery.datetimepicker.js"></script>
 	<script src="js/jsMedico.js"></script>
+	<script src="js/jsReservaAPS.js"></script>
 	<script src="js/jsUtil.js"></script>
 </body>
 </html>

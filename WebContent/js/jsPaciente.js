@@ -3,9 +3,14 @@
  */
 $("#calcular").click(function obtenerPacientes() {
 
+	
 	  var fecha1 = $('#dpd1').val();
 	  var fecha2 = $('#dpd2').val();
-	
+	  if(fecha1!="" && fecha2!=""){
+	  $(function (){
+			$(".tabla").find('tr:gt(0)').remove();
+		});
+	  
 	  $.getJSON("PacienteUsaMasSistema?fecha1=" + fecha1 + "&fecha2=" + fecha2+"",function(responseJson) {
 	            $.each(responseJson, function(key, value) {
 	                      $('.tabla tr:last').after(
@@ -14,13 +19,18 @@ $("#calcular").click(function obtenerPacientes() {
 	                    });
 	          });
 	  $("#reporte").fadeIn(1000);
-	});
+	}else {
+		alert("debe ingresar rango de fechas");
+	}
+	  });
 
 $("#buscarM").click(function buscarHorasAPSM(){
 	
 	var myselect=$("#myselect").val();
 	var fecha1 = $('#dpd1').val();
 	var fecha2 = $('#dpd2').val();
+	
+	if(fecha1!="" && fecha2!=""){
 	$(function (){
 		$(".tabla").find('tr:gt(0)').remove();
 	});
@@ -33,7 +43,9 @@ $("#buscarM").click(function buscarHorasAPSM(){
                  });
          $("#reporte").fadeIn(1000);
        });
-	
+	}else {
+		alert("debe ingresar rango de fechas");
+	}
 	
 });
 
@@ -42,6 +54,7 @@ $("#buscarR").click(function buscarHorasAPSR(){
 	
 	var fecha1 = $('#dpd1').val();
 	var fecha2 = $('#dpd2').val();
+	if(fecha1!="" && fecha2!=""){
 	$(function (){
 		$(".tabla").find('tr:gt(0)').remove();
 	});
@@ -55,6 +68,9 @@ $("#buscarR").click(function buscarHorasAPSR(){
         $(".tabla").show();
          $("#reporte").fadeIn(1000);
        });
+	}else {
+		alert("debe ingresar rango de fechas");
+	}
 	
 	
 });

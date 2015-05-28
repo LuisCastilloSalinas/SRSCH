@@ -45,6 +45,7 @@
 					</ul>
 
 				</div>
+				<form id="formulario" onsubmit="return false">
 				<div class="col-md-8 well">
 					<div class="row ">
 
@@ -83,6 +84,7 @@
 						</div>
 						
 					</div>
+				
 					
 					<div class="row" id="reporte" hidden="" style="margin-top: 3em;">
 						<div class="col-md-5  col-md-offset-2">
@@ -97,7 +99,7 @@
 
 
 				</div>
-				
+				</form>
 				
 
 
