@@ -1,14 +1,6 @@
 /**
  * 
  */
-$("document").ready(function() {
-	
-	$("#dpd1").datetimepicker();
-	$("#dpd2").datepicker();
-	
-	
-});
-
 $("#calcular").click(function obtenerPacientes() {
 
 	  var fecha1 = $('#dpd1').val();

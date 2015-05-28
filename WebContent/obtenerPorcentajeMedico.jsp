@@ -1,11 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html >
-<html>
+<html lang="es">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta charset="utf-8">
 <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
-<link rel="stylesheet" type="text/css" href="css/datapicker.css">
+<link rel="stylesheet" type="text/css" href="css/jquery.datetimepicker.css"> 
 <title>SRHMSC</title>
 
 </head>
@@ -124,10 +124,11 @@
 
 
 	<script src="js/jquery-2.1.4.min.js"></script>
+	<script src="js/jquery.datetimepicker.js"></script>
 	<script src="js/jsMedico.js"></script>
 	<script src="js/jsUtil.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/jquery-ui.js"></script>
-	<script src="js/datapicker.js"></script>
+	
 </body>
 </html>

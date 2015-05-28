@@ -2,7 +2,6 @@
  * 
  */
 $("document").ready(function() {
-	$('#dpd1').datetimepicker();
 	
 	
 	$.getJSON('ServletObBox', function(responseJson) {

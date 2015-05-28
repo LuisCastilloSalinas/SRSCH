@@ -38,26 +38,16 @@ public class PacienteUsaMasSistema extends HttpServlet {
 		String inputString1 = request.getParameter("fecha1");
 		String inputString2 = request.getParameter("fecha2");
 		
-		DateFormat inputFormat = new SimpleDateFormat("MM/dd/yyyy");
+		DateFormat inputFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm");
 		Date f1 = null;
 		Date f2 = null;
 		Calendar c1 = Calendar.getInstance();
 		Calendar c2 = Calendar.getInstance();
 		try {
 			f1 = (Date) inputFormat.parse(inputString1);
-			DateFormat outputFormat = new SimpleDateFormat("yyyy/MM/dd");
-			String outputString = outputFormat.format(f1);
-			//System.out.println(outputString);
-			f1 = (Date) outputFormat.parse(outputString);
-			
 			c1.setTime(f1);
-
 			f2 = (Date) inputFormat.parse(inputString2);
 
-			outputString = outputFormat.format(f2);
-			//System.out.println(outputString);
-			f2 = (Date) outputFormat.parse(outputString);
-			
 			c2.setTime(f2);
 
 			System.out.println(f1);
