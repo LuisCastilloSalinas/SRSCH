@@ -16,7 +16,7 @@ $("document").ready(function() {
 
 });
 
-$("#calcular").click(function obtenerPacientes() {
+$("#calcular").click(function obtenerMedicos() {
 
 	  var fecha1 = $('#dpd1').val();
 	  var fecha2 = $('#dpd2').val();
