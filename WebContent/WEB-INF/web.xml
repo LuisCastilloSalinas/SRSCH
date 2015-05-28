@@ -119,4 +119,14 @@
     <servlet-name>ServletObPaciente</servlet-name>
     <url-pattern>/ServletObPaciente</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ObtenerHorasAPSMedico</display-name>
+    <servlet-name>ObtenerHorasAPSMedico</servlet-name>
+    <servlet-class>servlet.ObtenerHorasAPSMedico</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ObtenerHorasAPSMedico</servlet-name>
+    <url-pattern>/ObtenerHorasAPSMedico</url-pattern>
+  </servlet-mapping>
 </web-app>
