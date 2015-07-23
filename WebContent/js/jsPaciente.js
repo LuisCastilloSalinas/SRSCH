@@ -60,13 +60,22 @@ $("#buscarR").click(function buscarHorasAPSR(){
 	});
 	
 	 $.getJSON("BuscarHoraAPSR?fecha1=" + fecha1 + "&fecha2=" + fecha2+"",function(responseJson) {
+		
+		 if(responseJson.length>0){
+		
 		 $.each(responseJson, function(key, value) {
                    $('.tabla tr:last').after(
                        '<tr><td>' + value.id + '</td><td>' + value.fecha
-                           + '</td><td>'+value.nombreMedico+'</td></tr>');
+                           + '</td><td>'+value.nombreMedico+'</td>'
+                           +'<td><button id="btnReserva" value="reservar" class="btn btn-default">reservar</button></td></tr>');
                  });
         $(".tabla").show();
-         $("#reporte").fadeIn(1000);
+        $("#reporte").fadeIn(1000);
+	 }else {
+		 $(".tabla").hide();
+		 alert("no existen horas medicas");
+		 
+	 }
        });
 	}else {
 		alert("debe ingresar rango de fechas");
@@ -74,4 +83,10 @@ $("#buscarR").click(function buscarHorasAPSR(){
 	
 	
 });
+
+("#btnReserva").click(function(){
+	alert("reserva");
+});
+
+
 

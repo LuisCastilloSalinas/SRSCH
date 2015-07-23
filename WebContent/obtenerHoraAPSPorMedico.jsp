@@ -13,7 +13,7 @@
 <body style="background-color: black;">
 
 	<div class="container well" style="margin-top: 20px;">
-		<div class="dropdown">
+		<div class="dropdown col-md-3">
 			<button class="btn btn-default dropdown-toggle" type="button"
 				id="menu1" data-toggle="dropdown">
 				Seleccionar <span class="caret"></span>
@@ -29,6 +29,9 @@
 					href="obtenerHorarioMedico.jsp">Médico</a></li>
 			</ul>
 		</div>
+		<div class="col-md-3 col-md-offset-6">
+  <span class="badge badge-inverse">Paciente</span>
+  </div>
 		<div class="col-md-12">
 
 			<h2 class="text-center">Obtener hora APS por médico</h2>
@@ -92,12 +95,12 @@
 
 				</div>
 
-				<div class="row">
+				<div class="row" style="margin-top: 2em;">
 					<div class="col-md-2 col-md-offset-4">
 						<input type="submit" value="Buscar" id="buscarM">
 					</div>
 					<div class="col-md-2">
-						<button class="btn- btn-danger" type="reset">Cancelar</button>
+						<button class="btn- btn-danger" type="reset">Limpiar</button>
 					</div>
 
 				</div>
@@ -138,5 +141,6 @@
 	<script src="js/jsPaciente.js"></script>
 	<script src="js/jsMedico.js"></script>
 	<script src="js/jsUtil.js"></script>
+	
 </body>
 </html>

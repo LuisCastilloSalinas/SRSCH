@@ -3,6 +3,7 @@ package servlet;
 import java.io.IOException;
 import java.io.PrintWriter;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -28,6 +29,13 @@ public class ReservarHoraAPS extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		ReservarHoraAPSWSProxy res = new ReservarHoraAPSWSProxy();
 		String fecha = request.getParameter("selectFecha");
 		String paciente= request.getParameter("selectPaciente");
@@ -36,17 +44,16 @@ public class ReservarHoraAPS extends HttpServlet {
 			int idPaciente = Integer.parseInt(paciente);
 			int idHoraMedicaAPS = Integer.parseInt(fecha);
 			String numR=res.reservarHoraAPS(idHoraMedicaAPS, idPaciente);
-		PrintWriter pw = response.getWriter();
-		pw.print(numR);
-		pw.close();
+			
+			String out ="";
+			out+="<div>";
+			out+="numero reserva "+numR;
+			out+="</div>";
+			request.setAttribute("reserva", out);
+			RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/reservarHoraAps.jsp");
+			dispatcher.forward(request,response);
+	
 		}
-	}
-
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
 	}
 
 }

@@ -37,17 +37,22 @@ public class BuscarHoraAPSR extends HttpServlet {
 		
 		String inputString1 = request.getParameter("fecha1");
 		String inputString2 = request.getParameter("fecha2");
+		DateFormat inputFormat = new SimpleDateFormat("dd-MM-yyyy HH:mm");
 		
-		DateFormat inputFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm");
+		DateFormat outputFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm");
 		Date f1 = null;
 		Date f2 = null;
 		Calendar c1 = Calendar.getInstance();
 		Calendar c2 = Calendar.getInstance();
 		try {
 			f1 = (Date) inputFormat.parse(inputString1);
-			c1.setTime(f1);
 			f2 = (Date) inputFormat.parse(inputString2);
-
+			String fecha1 = outputFormat.format(f1);
+			f1 = (Date) outputFormat.parse(fecha1);
+			c1.setTime(f1);
+			String fecha2= outputFormat.format(f2);
+			f2 = (Date) outputFormat.parse(fecha2);
+			
 			c2.setTime(f2);
 
 
@@ -55,7 +60,6 @@ public class BuscarHoraAPSR extends HttpServlet {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
 		String horasMedicas="";
 		if(c1!=null && c2!=null)
 		horasMedicas=searchRango.obtenerHoraAPSPorRango(c1, c2);

@@ -4,11 +4,14 @@
 
 
 $("document").ready(function() {
-	
+	var current = new Date(); //'Mar 11 2015' current.getTime() = 1426060964567
+	var followingDay = new Date(current.getTime() + 86400000); // + 1 day in ms
+	followingDay.toLocaleDateString();
 	
 	$('#dpd1').datetimepicker({
-		 format : 'Y-m-d H:i',
+		 format : 'd-m-Y H:i',
 		 lang:'es',
+		 value:current,
 		 allowTimes:['08:00','08:15','08:30','08:45',
 		             '09:00','09:15','09:30','09:45',
 		             '10:00','10:15','10:30','10:45',
@@ -22,7 +25,8 @@ $("document").ready(function() {
 		 theme:'dark'
 	});
 	$('#dpd2').datetimepicker({
-		 format : 'Y-m-d H:i',
+		 format : 'd-m-Y H:i',
+		 value:followingDay,
 		 lang:'es',
 		 allowTimes:['08:00','08:15','08:30','08:45',
 		             '09:00','09:15','09:30','09:45',

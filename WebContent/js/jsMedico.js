@@ -50,12 +50,19 @@ $("#buscar").click(function buscarSusHoras(){
 	});
 	
 	 $.getJSON("BuscarSuDisponibilidadHora?myselect="+myselect+"&fecha1=" + fecha1 + "&fecha2=" + fecha2+"",function(responseJson) {
-         $.each(responseJson, function(key, value) {
+         if(responseJson.length >0){
+		 $.each(responseJson, function(key, value) {
                    $('.tabla tr:last').after(
                        '<tr><td>' + value.id + '</td><td>' + value.fecha
                            + '</td></tr>');
                  });
          $("#reporte").fadeIn(1000);
+         }
+         else {
+        	 $("#reporte").hide();
+        	 alert("no existen horas registradas");
+         }
+         
        });
 	}else {
 		alert("debe ingresar rango de fechas");
